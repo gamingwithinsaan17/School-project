@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Tale of Two Crises: Ice and Water Under Threat</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 300px;
+            max-height: 400px;
+        }
+        @media (min-width: 768px) {
+            .chart-container {
+                height: 350px;
+            }
+        }
+        /* Custom gradient for the title */
+        .gradient-text {
+            background-image: linear-gradient(to right, #FFD166, #FF6B6B);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            color: transparent;
+        }
+    </style>
+</head>
+<body class="bg-[#0A1929] text-gray-100">
+
+    <header class="text-center py-12 px-4">
+        <!-- Title using a CSS gradient for a vibrant effect -->
+        <h1 class="text-4xl md:text-6xl font-black gradient-text tracking-tight">A Tale of Two Crises</h1>
+        <p class="text-xl md:text-2xl mt-2 text-[#06D6A0]">Ice and Water Under Threat in India</p>
+    </header>
+
+    <main class="container mx-auto px-4 md:px-8">
+
+        <section id="ladakh" class="py-12">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-5xl font-bold text-white">The Cryosphere in Crisis: Ladakh's Melting Glaciers</h2>
+                <p class="mt-4 max-w-3xl mx-auto text-lg text-gray-400">The Himalayan glaciers, often called Asia's "water towers," are retreating at an alarming rate. Ladakh, a cold desert region, is on the front lines, facing dire consequences for its water security and ecological stability.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 items-center">
+
+                <div class="bg-[#183952] rounded-lg shadow-xl p-6 text-center">
+                    <p class="text-6xl font-black text-[#FF6B6B]">10x</p>
+                    <p class="mt-2 text-xl font-bold">Faster Retreat</p>
+                    <p class="text-gray-400 mt-1">The retreat rate of the Parkachik glacier has accelerated tenfold from an average of 2m/year (1971-99) to 20m/year (2015-21).</p>
+                </div>
+
+                <div class="bg-[#183952] rounded-lg shadow-xl p-6 md:col-span-2 lg:col-span-2">
+                   <h3 class="text-2xl font-bold text-center mb-4 text-[#FFD166]">Accelerating Glacier Retreat</h3>
+                   <p class="text-center text-gray-400 mb-4">The rate of ice loss from the Parkachik Glacier shows a dramatic increase in recent decades, highlighting the urgent impact of climate change.</p>
+                    <div class="chart-container h-64 md:h-80">
+                        <canvas id="glacierRetreatChart"></canvas>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="mt-12">
+                <h3 class="text-2xl font-bold text-center mb-6 text-white">Factors Contributing to Accelerated Melting</h3>
+                <div class="flex flex-col md:flex-row justify-center items-center gap-4 text-center">
+                   <div class="bg-[#118AB2] p-4 rounded-lg shadow-lg">
+                        <p class="text-2xl">🌡️</p>
+                        <p class="font-bold">Atmospheric Warming</p>
+                    </div>
+                    <div class="text-2xl font-bold text-[#06D6A0]">➔</div>
+                    <div class="bg-[#118AB2] p-4 rounded-lg shadow-lg">
+                        <p class="text-2xl">⚫</p>
+                        <p class="font-bold">Black Carbon Deposits</p>
+                    </div>
+                   <div class="text-2xl font-bold text-[#06D6A0]">➔</div>
+                    <div class="bg-[#118AB2] p-4 rounded-lg shadow-lg">
+                        <p class="text-2xl">💨</p>
+                        <p class="font-bold">Pollution from Vehicles</p>
+                    </div>
+                    <div class="text-2xl font-bold text-[#FF6B6B]">➔</div>
+                   <div class="bg-[#FF6B6B] p-4 rounded-lg shadow-lg">
+                        <p class="text-2xl">💧</p>
+                        <p class="font-bold">Glacier Mass Loss</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mt-12">
+                <div class="bg-[#183952] rounded-lg shadow-xl p-6">
+                    <h3 class="text-2xl font-bold text-center mb-4 text-[#FFD166]">The Looming Threat of GLOFs</h3>
+                    <p class="text-gray-400 text-center">Rapid melting creates unstable glacial lakes. A breach can cause a Glacial Lake Outburst Flood (GLOF), a catastrophic event threatening downstream communities. The Parkachik glacier alone could form <span class="font-bold text-white text-xl">3 new lakes</span>, significantly increasing this risk.</p>
+                </div>
+                <div class="bg-[#183952] rounded-lg shadow-xl p-6">
+                    <h3 class="text-2xl font-bold text-center mb-4 text-[#FFD166]">Water Security at Risk</h3>
+                    <p class="text-center text-gray-400 mb-4">Ladakh's agriculture and drinking water are heavily dependent on glacial melt. As these frozen reservoirs shrink, the region faces a future of severe water scarcity.</p>
+                    <div class="chart-container h-48 md:h-56">
+                        <canvas id="waterDependencyChart"></canvas>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <hr class="border-white/20 my-12">
+
+        <section id="ghats" class="py-12">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-5xl font-bold text-white">The Lifeline is Choking: Karnataka's Polluted Ghats</h2>
+                <p class="mt-4 max-w-3xl mx-auto text-lg text-gray-400">The Western Ghats, a UNESCO World Heritage site and a global biodiversity hotspot, are facing a severe pollution crisis. The rivers that originate here, lifelines for millions, are being contaminated by a variety of human activities.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                <div class="bg-[#183952] rounded-lg shadow-xl p-6">
+                    <h3 class="text-2xl font-bold text-center mb-4 text-[#FFD166]">Major Sources of River Pollution</h3>
+                    <p class="text-center text-gray-400 mb-4">A combination of factors contributes to the degradation of the pristine rivers of the Western Ghats.</p>
+                    <div class="chart-container h-80">
+                        <canvas id="pollutionSourcesChart"></canvas>
+                    </div>
+                </div>
+                <div class="bg-[#183952] rounded-lg shadow-xl p-6">
+                    <h3 class="text-2xl font-bold text-center mb-4 text-[#FFD166]">The Invisible Threat: Microplastics</h3>
+                    <div class="text-center">
+                        <p class="text-6xl">🔬</p>
+                        <p class="mt-4 text-gray-400">Recent studies have found rivers like the Nethravathi and Sharavathi are contaminated with microplastic fragments, fibers, and foams. These tiny particles pose a significant risk to freshwater ecosystems and can enter the human food chain, with long-term consequences for health and the environment.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-12">
+                <h3 class="text-2xl font-bold text-center mb-6 text-white">Ecological Domino Effect</h3>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 text-center">
+                    <div class="bg-[#118AB2] p-6 rounded-lg shadow-lg">
+                        <p class="text-4xl">🐠</p>
+                        <h4 class="font-bold text-xl mt-2">Freshwater Ecosystems Collapse</h4>
+                        <p class="text-gray-300 mt-1">Pollutants deplete oxygen and harm aquatic life, threatening endemic species.</p>
+                    </div>
+                    <div class="bg-[#118AB2] p-6 rounded-lg shadow-lg">
+                        <p class="text-4xl">🌊</p>
+                        <h4 class="font-bold text-xl mt-2">Increased Flood & Landslide Risk</h4>
+                        <p class="text-gray-300 mt-1">Deforestation and mining weaken the terrain, making it more vulnerable to natural disasters.</p>
+                    </div>
+                    <div class="bg-[#118AB2] p-6 rounded-lg shadow-lg sm:col-span-2 lg:col-span-1">
+                        <p class="text-4xl">🌳</p>
+                        <h4 class="font-bold text-xl mt-2">Critical Biodiversity Loss</h4>
+                        <p class="text-gray-300 mt-1">The cumulative impact of pollution and habitat loss endangers the region's unique plants and animals.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- New Team Section -->
+    <section id="our-team" class="container mx-auto px-4 md:px-8 py-12">
+        <hr class="border-white/20 my-12">
+        <div class="text-center mb-12">
+            <h2 class="text-3xl md:text-5xl font-bold text-white">Our Team</h2>
+            <p class="mt-4 max-w-3xl mx-auto text-lg text-gray-400">Dedicated individuals working to highlight these critical environmental issues.</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="bg-[#118AB2] rounded-lg shadow-xl p-6 text-center">
+                <h3 class="text-2xl font-bold text-[#FFD166] mb-4">Developers</h3>
+                <ul class="list-none p-0 m-0 text-white">
+                    <li class="mb-2">Rajat</li>
+                    <li>Nachiketh</li>
+                </ul>
+            </div>
+            <div class="bg-[#118AB2] rounded-lg shadow-xl p-6 text-center">
+                <h3 class="text-2xl font-bold text-[#06D6A0] mb-4">Ghats Team</h3>
+                <ul class="list-none p-0 m-0 text-white">
+                    <li class="mb-2">Dhruv</li>
+                    <li>Shivam</li>
+                </ul>
+            </div>
+            <div class="bg-[#118AB2] rounded-lg shadow-xl p-6 text-center">
+                <h3 class="text-2xl font-bold text-[#FF6B6B] mb-4">Glaciers Team</h3>
+                <ul class="list-none p-0 m-0 text-white">
+                    <li class="mb-2">Priyesh</li>
+                    <li>Vinay</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="text-center mt-12">
+            <p class="text-gray-400 text-lg">Proudly representing:</p>
+            <p class="text-white text-2xl font-bold mt-2">Pruthvi House Grade 9 Group 2</p>
+        </div>
+    </section>
+
+    <footer class="text-center py-8 mt-12 px-4">
+        <p class="text-gray-400">These interconnected crises highlight the urgent need for comprehensive environmental policies and sustainable practices to protect India's vital natural resources.</p>
+        <p class="text-gray-500 text-sm mt-2">.</p>
+    </footer>
+
+    <script>
+        const wrapLabel = (label) => {
+            const maxLength = 16;
+            if (label.length <= maxLength) {
+                return label;
+            }
+            const words = label.split(' ');
+            const lines = [];
+            let currentLine = '';
+            for (const word of words) {
+                if ((currentLine + ' ' + word).trim().length > maxLength) {
+                    lines.push(currentLine.trim());
+                    currentLine = word;
+                } else {
+                    currentLine = (currentLine + ' ' + word).trim();
+                }
+            }
+            if (currentLine) {
+                lines.push(currentLine.trim());
+            }
+            return lines;
+        };
+        
+        const tooltipTitleCallback = (tooltipItems) => {
+            const item = tooltipItems[0];
+            let label = item.chart.data.labels[item.dataIndex];
+            if (Array.isArray(label)) {
+                return label.join(' ');
+            }
+            return label;
+        };
+
+        const sharedChartOptions = {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: {
+                legend: {
+                    labels: {
+                        color: '#E5E7EB'
+                    }
+                },
+                tooltip: {
+                    callbacks: {
+                        title: tooltipTitleCallback
+                    }
+                }
+            },
+            scales: {
+                y: {
+                    ticks: { color: '#9CA3AF' },
+                    grid: { color: 'rgba(255, 255, 255, 0.1)' }
+                },
+                x: {
+                    ticks: { color: '#9CA3AF' },
+                    grid: { color: 'rgba(255, 255, 255, 0.1)' }
+                }
+            }
+        };
+
+        const glacierRetreatCtx = document.getElementById('glacierRetreatChart').getContext('2d');
+        new Chart(glacierRetreatCtx, {
+            type: 'line',
+            data: {
+                labels: ['1971-1999', '1999-2015', '2015-2021'],
+                datasets: [{
+                    label: 'Average Retreat Rate (meters/year)',
+                    data: [2, 12, 20],
+                    borderColor: '#FF6B6B',
+                    backgroundColor: 'rgba(255, 107, 107, 0.2)',
+                    fill: true,
+                    tension: 0.4
+                }]
+            },
+            options: sharedChartOptions
+        });
+
+        const waterDependencyCtx = document.getElementById('waterDependencyChart').getContext('2d');
+        new Chart(waterDependencyCtx, {
+            type: 'doughnut',
+            data: {
+                labels: ['Glacial Meltwater', 'Other Sources'],
+                datasets: [{
+                    label: 'Water Source Dependency',
+                    data: [85, 15],
+                    backgroundColor: ['#118AB2', '#06D6A0'],
+                    borderColor: '#0A1929',
+                    hoverOffset: 4
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: {
+                        position: 'top',
+                        labels: { color: '#E5E7EB' }
+                    },
+                    tooltip: {
+                        callbacks: {
+                            title: tooltipTitleCallback
+                        }
+                    }
+                }
+            }
+        });
+
+        const pollutionSourcesCtx = document.getElementById('pollutionSourcesChart').getContext('2d');
+        new Chart(pollutionSourcesCtx, {
+            type: 'bar',
+            data: {
+                labels: [
+                    'Untreated Sewage & Domestic Waste',
+                    'Unregulated Tourism & Pilgrimage',
+                    'Industrial & Agricultural Runoff',
+                    'Mining & Quarrying'
+                ].map(wrapLabel),
+                datasets: [{
+                    label: 'Relative Impact Score',
+                    data: [85, 70, 55, 40],
+                    backgroundColor: ['#FF6B6B', '#FFD166', '#06D6A0', '#118AB2'],
+                    borderColor: '#0A1929',
+                    borderWidth: 2
+                }]
+            },
+            options: {
+                ...sharedChartOptions,
+                indexAxis: 'y',
+                scales: {
+                    x: {
+                        ticks: { color: '#9CA3AF' },
+                        grid: { color: 'rgba(255, 255, 255, 0.1)' }
+                    },
+                    y: {
+                        ticks: { color: '#E5E7EB' },
+                        grid: { display: false }
+                    }
+                },
+                plugins: {
+                    legend: {
+                        display: false
+                    },
+                    tooltip: {
+                        callbacks: {
+                            title: tooltipTitleCallback
+                        }
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+</html>
